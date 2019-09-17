@@ -1,0 +1,19 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: Borales/actions-yarn@master
+      with:
+        args: install
+    - uses: Borales/actions-yarn@master
+      with:
+        args: build
+    - uses: peaceiris/actions-gh-pages@v1.1.0
