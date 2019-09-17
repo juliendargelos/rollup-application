@@ -1,0 +1,38 @@
+{
+  "name": "rollup-app",
+  "version": "1.0.0",
+  "author": "Julien Dargelos <contact@juliendargelos.com>",
+  "repository": "juliendargelos/rollup-app",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "dependencies": {
+    "reset-css": "^4.0.1",
+    "sass-easing": "^1.0.3",
+    "tiny-emitter": "^2.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "node-sass": "^4.12.0",
+    "rollup": "^1.21.4",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-delete": "^1.1.0",
+    "rollup-plugin-emit-ejs": "^2.0.1",
+    "rollup-plugin-emit-files": "^1.0.0",
+    "rollup-plugin-html-minifier": "^1.0.1",
+    "rollup-plugin-livereload": "^1.0.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-terser": "^5.1.2",
+    "rollup-plugin-typescript2": "^0.24.2",
+    "typescript": "^3.6.3"
+  }
+}
