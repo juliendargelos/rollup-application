@@ -2,13 +2,17 @@ name: Update
 
 on:
   schedule:
-    - cron: 38 12 * * *
+    - cron: 13 13 * * *
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+      with:
+        ref: update-dependencies
+    - uses: actions/checkout@v1
+      if: failure()
     - uses: mikeal/npx@master
       with:
         args: yarn-up -u
@@ -17,5 +21,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PULL_REQUEST_BRANCH: update-dependencies
         PULL_REQUEST_TITLE: Update dependencies
+        BRANCH_SUFFIX: none
         COMMIT_MESSAGE: Automatically update dependencies
         PULL_REQUEST_BODY:
