@@ -1,0 +1,17 @@
+name: Update
+
+on:
+  schedule:
+    - cron: 0 0 * * *
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: mikeal/npx@master
+      with:
+        args: yarn-up -u
+    - uses: peter-evans/create-pull-request@v1.5.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
