@@ -2,10 +2,10 @@ name: Update
 
 on:
   schedule:
-    - cron: 34 12 * * *
+    - cron: 38 12 * * *
 
 jobs:
-  build:
+  update:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
