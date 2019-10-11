@@ -2,23 +2,18 @@ name: Update
 
 on:
   schedule:
-    - cron: 30 13 * * *
+    - cron: 04 14 * * *
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-      with:
-        ref: update-dependencies
-    - uses: actions/checkout@v1
-      if: failure()
+    - run: git checkout update-dependencies 2>/dev/null || git checkout -b update-dependencies
     - uses: mikeal/npx@master
-      if: always()
       with:
         args: yarn-up -u
     - uses: peter-evans/create-pull-request@v1.5.1
-      if: always()
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PULL_REQUEST_BRANCH: update-dependencies
