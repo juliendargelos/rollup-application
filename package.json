@@ -7,7 +7,8 @@
   "private": true,
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "test": "yarn build"
   },
   "browserslist": [
     "defaults"
