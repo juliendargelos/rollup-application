@@ -2,14 +2,14 @@ name: Update
 
 on:
   schedule:
-    - cron: 12 14 * * *
+    - cron: 17 14 * * *
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - run: git checkout update-dependencies 2>/dev/null ||:
+    - run: git checkout update-dependencies 2>/dev/null || true
     - uses: mikeal/npx@master
       with:
         args: yarn-up -u
