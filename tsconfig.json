@@ -18,7 +18,6 @@
     "esModuleInterop": true
   },
   "include": [
-    "src/javascripts/@types/**/*",
     "src/javascripts/**/*"
   ]
 }
