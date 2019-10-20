@@ -14,7 +14,7 @@
     "defaults"
   ],
   "dependencies": {
-    "reset-css": "^5.0.0",
+    "reset-css": "^5.0.1",
     "sass-easing": "^1.0.3",
     "tiny-emitter": "^2.1.0"
   },
