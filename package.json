@@ -21,7 +21,7 @@
   "devDependencies": {
     "autoprefixer": "^9.6.5",
     "node-sass": "^4.12.0",
-    "rollup": "^1.25.0",
+    "rollup": "^1.25.1",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-delete": "^1.1.0",
     "rollup-plugin-emit-ejs": "^2.0.3",
