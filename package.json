@@ -24,7 +24,7 @@
     "rollup": "^1.25.2",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-delete": "^1.1.0",
-    "rollup-plugin-emit-ejs": "^2.0.3",
+    "rollup-plugin-emit-ejs": "^2.0.4",
     "rollup-plugin-emit-files": "^1.0.0",
     "rollup-plugin-html-minifier": "^1.0.1",
     "rollup-plugin-livereload": "^1.0.4",
