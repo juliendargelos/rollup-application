@@ -1,27 +1,34 @@
-# rollup-app
+# rollup-application
 
-## Install
+[![build](https://github.com/juliendargelos/rollup-application/workflows/build/badge.svg?branch=master)](https://github.com/juliendargelos/rollup-application/actions?workflow=build)
+<!-- [![deploy](https://github.com/juliendargelos/rollup-application/workflows/deploy/badge.svg?branch=master)](https://github.com/juliendargelos/rollup-application/actions?workflow=deploy) !-->
+[![version](https://img.shields.io/github/package-json/v/juliendargelos/rollup-application)](https://github.com/juliendargelos/rollup-application)
 
-Clone the repository, move into project folder and install dependencies:
+Application template for rollup and typescript, powered by github actions.
 
-```bash
-git clone git@github.com:juliendargelos/rollup-app.git
-cd rollup-app
-yarn
-```
+Dependencies always up to date thanks to [dependabot](https://dependabot.com).
 
-## Development
+### Usage
 
-Watch source files for changes and start development server:
+Click on <sub>[![Use this template](https://img.shields.io/badge/-Use%20this%20template-brightgreen)](https://github.com/juliendargelos/rollup-application/generate)</sub> then wait for the [initialize workflow](.github/workflows/initialize.yml) to complete. The package name and urls will be automatically replaced at initialization. You may want to change the author name in `package.json` and `LICENSE`.
 
-```bash
-yarn dev
-```
+### Features
 
-## Production
+#### Bundling
 
-Build project for production:
+- Rollup, TypeScript and ESLint
+- IFFE bundle
+- Path alias from tsconfig.json synced with rollup
+- Development server with SSL and livereload
+- Views with EJS
+- Stylesheets with SASS including css reset and easing variables
+- Static files
+- Terser
 
-```
-yarn build
-```
+#### Continuous integration (Github Actions)
+
+- Build on pull requests and push to master
+- Build and deploy to Github Pages on push to master<br>
+  *Requires `PERSONAL_TOKEN` secret to be set as a [GitHub personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) with full `repo` scope.*
+
+The [deploy](.github/workflows/deploy.yml.sample) workflow is disabled by default, [add the required secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets) and remove the `.sample` suffix from the corresponding file to enable it.

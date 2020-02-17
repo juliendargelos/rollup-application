@@ -1,45 +1,62 @@
+import devcert from 'devcert'
 import autoprefixer from 'autoprefixer'
-import { terser } from 'rollup-plugin-terser'
+import autoExternal from 'rollup-plugin-auto-external'
 import htmlMinifier from 'rollup-plugin-html-minifier'
-import typescript from 'rollup-plugin-typescript2'
+import nodeResolve from '@rollup/plugin-node-resolve'
 import livereload from 'rollup-plugin-livereload'
 import emitFiles from 'rollup-plugin-emit-files'
-import resolve from 'rollup-plugin-node-resolve'
-import commonjs from 'rollup-plugin-commonjs'
+import commonjs from '@rollup/plugin-commonjs'
 import emitEJS from 'rollup-plugin-emit-ejs'
-import postcss from 'rollup-plugin-postcss'
+import cleaner from 'rollup-plugin-cleaner'
 import replace from 'rollup-plugin-replace'
+import postcss from 'rollup-plugin-postcss'
+import alias from '@rollup/plugin-alias'
 import serve from 'rollup-plugin-serve'
-import del from 'rollup-plugin-delete'
+import ts from 'rollup-plugin-ts'
+import { terser } from 'rollup-plugin-terser'
+import { eslint } from 'rollup-plugin-eslint'
+
+import tsconfig from './tsconfig.json'
 
 const src = 'src'
 const dest = 'dist'
-const production = !process.env.ROLLUP_WATCH
+const development = process.env.ROLLUP_WATCH
+const production = !development
 
 export default async () => ({
   input: `${src}/javascripts/index.ts`,
   output: {
     dir: dest,
-    entryFileNames: '[hash].js',
+    entryFileNames: production ? '[hash].js' : 'index.js',
     format: 'iife',
-    sourcemap: !production && 'inline'
+    sourcemap: development
   },
   plugins: [
-    resolve(),
-    commonjs(),
-    typescript({ clean: true }),
     postcss({
       extract: true,
       minimize: production,
-      sourceMap: !production && 'inline',
       plugins: [autoprefixer]
     }),
+    autoExternal(),
+    nodeResolve(),
+    commonjs(),
+    ts(),
+    eslint(),
+    cleaner({ targets: [dest] }),
+    replace({ production, development }),
     emitEJS({ src: `${src}/views`, layout: `${src}/views/layout.html.ejs` }),
-    emitFiles({ src: 'static' }),
-    del({ targets: `${dest}/**/*` }),
-    replace({ production }),
-    !production && livereload({ watch: dest }),
-    !production && serve({ contentBase: dest }),
+    alias({
+      resolve: ['.ts'],
+      entries: Object
+        .entries(tsconfig.compilerOptions.paths)
+        .map(([find, [replacement]]) => ({ find, replacement }))
+    }),
+    development && serve({
+      contentBase: [dest, 'static'],
+      https: await devcert.certificateFor('localhost', { getCaPath: true })
+    }),
+    development && livereload({ watch: dest }),
+    production && emitFiles({ src: 'static' }),
     production && htmlMinifier({ collapseWhitespace: true }),
     production && terser()
   ]

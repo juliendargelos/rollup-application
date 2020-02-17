@@ -1,23 +1,24 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "module": "es2015",
-    "moduleResolution": "node",
-    "lib": ["es2017", "dom","es6", "dom.iterable", "scripthost"],
+    "lib": ["es2017", "dom", "es6", "dom.iterable", "scripthost"],
     "sourceMap": true,
     "strict": true,
+    "experimentalDecorators": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "strictPropertyInitialization": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
-    "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/javascripts/*"]
+    }
   },
-  "include": [
-    "src/javascripts/**/*"
-  ]
+  "include": ["src/javascripts"]
 }
