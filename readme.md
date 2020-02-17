@@ -21,7 +21,7 @@ Click on <sub>[![Use this template](https://img.shields.io/badge/-Use%20this%20t
 - Path alias from tsconfig.json synced with rollup
 - Development server with SSL and livereload
 - Views with EJS
-- Stylesheets with SASS including css reset and easing variables
+- Stylesheets with SASS including CSS reset and easing variables
 - Static files
 - Terser
 
