@@ -30,4 +30,4 @@ Click on <sub>[![Use this template](https://img.shields.io/badge/-Use%20this%20t
 - Build on pull requests and push to master
 - Build and deploy to Github Pages on push to master<br>
   *Requires `PERSONAL_TOKEN` [secret](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets) to be set as a [GitHub personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) with full `repo` scope.*<br>
-  The [deploy](.github/workflows/deploy.yml.sample) workflow is disabled by default, remove the `.sample` suffix to enable it.
+  *The [deploy](.github/workflows/deploy.yml.sample) workflow is disabled by default, remove the `.sample` suffix to enable it.*
