@@ -1,7 +1,7 @@
 # rollup-application
 
-[![build](https://github.com/juliendargelos/rollup-application/workflows/build/badge.svg?branch=master)](https://github.com/juliendargelos/rollup-application/actions?workflow=build)
-<!-- [![deploy](https://github.com/juliendargelos/rollup-application/workflows/deploy/badge.svg?branch=master)](https://github.com/juliendargelos/rollup-application/actions?workflow=deploy) !-->
+[![build](https://github.com/juliendargelos/rollup-application/workflows/build/badge.svg?branch=master)](https://github.com/juliendargelos/rollup-application/actions?workflow=build)<!--
+[![deploy](https://github.com/juliendargelos/rollup-application/workflows/deploy/badge.svg?branch=master)](https://github.com/juliendargelos/rollup-application/actions?workflow=deploy) !-->
 [![version](https://img.shields.io/github/package-json/v/juliendargelos/rollup-application)](https://github.com/juliendargelos/rollup-application)
 
 Application template for rollup and typescript, powered by github actions.
