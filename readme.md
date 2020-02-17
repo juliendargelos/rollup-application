@@ -8,6 +8,8 @@ Application template for rollup and typescript, powered by github actions.
 
 Dependencies always up to date thanks to [dependabot](https://dependabot.com).
 
+*See [rollup-library](https://github.com/juliendargelos/rollup-library) if you need a library template.*
+
 ### Usage
 
 Click on <sub>[![Use this template](https://img.shields.io/badge/-Use%20this%20template-brightgreen)](https://github.com/juliendargelos/rollup-application/generate)</sub> then wait for the [initialize workflow](.github/workflows/initialize.yml) to complete. The package name and urls will be automatically replaced at initialization. You may want to change the author name in `package.json` and `LICENSE`.
