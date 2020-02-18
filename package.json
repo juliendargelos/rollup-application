@@ -21,7 +21,7 @@
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-html": "^0.1.1",
     "@rollup/plugin-node-resolve": "^7.1.1",
-    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/eslint-plugin": "^2.20.0",
     "@typescript-eslint/parser": "^2.19.2",
     "autoprefixer": "^9.7.4",
     "devcert": "^1.1.0",
