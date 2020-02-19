@@ -17,7 +17,7 @@ Click on <sub>[![Use this template](https://img.shields.io/badge/-Use%20this%20t
 #### Bundling
 
 - Rollup, TypeScript and ESLint
-- IFFE bundle
+- IIFE bundle
 - Path alias from tsconfig.json synced with rollup
 - Development server with SSL and livereload
 - Views with EJS
