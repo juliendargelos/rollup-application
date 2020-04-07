@@ -22,7 +22,7 @@
     "@rollup/plugin-html": "^0.1.1",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
-    "@typescript-eslint/parser": "^2.26.0",
+    "@typescript-eslint/parser": "^2.27.0",
     "autoprefixer": "^9.7.5",
     "devcert": "^1.1.0",
     "eslint": "^6.8.0",
