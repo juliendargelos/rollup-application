@@ -34,7 +34,7 @@
     "rollup-plugin-emit-files": "^1.0.0",
     "rollup-plugin-eslint": "^7.0.0",
     "rollup-plugin-html-minifier": "^1.0.1",
-    "rollup-plugin-livereload": "^1.1.0",
+    "rollup-plugin-livereload": "^1.2.0",
     "rollup-plugin-postcss": "^2.5.0",
     "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-serve": "^1.0.1",
