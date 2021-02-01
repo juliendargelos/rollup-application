@@ -17,7 +17,7 @@
     "reset-css": "^5.0.1"
   },
   "devDependencies": {
-    "@rollup/plugin-alias": "^3.1.1",
+    "@rollup/plugin-alias": "^3.1.2",
     "@rollup/plugin-commonjs": "^11.1.0",
     "@rollup/plugin-html": "^0.1.1",
     "@rollup/plugin-node-resolve": "^7.1.3",
