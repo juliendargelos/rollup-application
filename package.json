@@ -31,7 +31,7 @@
     "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-emit-ejs": "^3.0.0",
-    "rollup-plugin-emit-files": "^1.0.0",
+    "rollup-plugin-emit-files": "^1.1.0",
     "rollup-plugin-eslint": "^7.0.0",
     "rollup-plugin-html-minifier": "^1.0.1",
     "rollup-plugin-livereload": "^1.3.0",
